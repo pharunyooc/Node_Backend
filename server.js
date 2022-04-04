@@ -59,6 +59,6 @@ app.post('/register', jsonParser, (req, res, next)=> {
 
 
 app.listen(PORT,()=>{
-    console.log(`Server is running on ${{PORT}}`)
+    console.log(`Server is running on ${PORT}`)
 
 })
