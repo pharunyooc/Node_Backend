@@ -24,7 +24,7 @@ app.use(cors());
 
 
 app.get("/",(req,res)=>{
-    res.json({result:"ok",data:[1,2,3]})
+    res.json({result:"ok",data:[1,2,3,4,5,6]})
 })
 app.post('/register', jsonParser, (req, res, next)=> {
     let fname = req.body.fname;
