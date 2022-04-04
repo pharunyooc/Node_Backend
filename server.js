@@ -1,12 +1,13 @@
 const express = require("express")
 const app = express()
-const PORT = process.env.PORT || 8080
+const port = process.env.PORT || 8080
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 const secret = 'pts2021'
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const cors = require('cors')
 
 const mysql = require('mysql2');
 
@@ -19,7 +20,7 @@ const connection = mysql.createConnection({
 });
 
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.get("/",(req,res)=>{
@@ -58,7 +59,7 @@ app.post('/register', jsonParser, (req, res, next)=> {
 })
 
 
-app.listen(PORT,()=>{
-    console.log(`Server is running on ${PORT}`)
+app.listen(port,()=>{
+    console.log(`Server is running on. ${port}`)
 
 })
