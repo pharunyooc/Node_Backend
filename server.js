@@ -20,7 +20,6 @@ const connection = mysql.createConnection({
 });
 
 
-app.use(cors());
 
 
 app.get("/",(req,res)=>{
